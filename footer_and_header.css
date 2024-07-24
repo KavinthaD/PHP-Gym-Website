@@ -1,0 +1,75 @@
+
+
+#location{
+    color: white;
+  }
+  .footer-heading a{
+    color: white;
+  }
+  .footer-hr{
+    border: none; /* Remove the default border */
+height: 2px; /* Set the desired thickness */
+background-color: #EC0015; /* Set the desired color */
+margin: 20px 0; /* Optional: Adjust the margin as needed */
+  }
+  .icon{
+    height: 40px;
+    width: auto;
+  }
+  /* Set gray background color and 100% height */
+  .sidenav {
+    padding-top: 20px;
+    background-color: #f1f1f1;
+    height: 100%;
+  }
+  
+  /* Set black background color, white text and some padding */
+  footer {
+    background-color: #014a8a;
+    color: white;
+    padding: 15px;
+    
+  }
+  
+  /* On small screens, set height to 'auto' for sidenav and grid */
+  @media screen and (max-width: 767px) {
+    .sidenav {
+      height: auto;
+      padding: 15px;
+    }
+    .row.content {height:auto;} 
+  }
+  #logo{
+      width: 400px;
+      height: auto;
+      margin-top: -30px;
+      margin-left: -30px;
+  }
+  .navbar-nav>.active>a{
+    border-radius: 5px;
+  }
+  
+  .navbar-nav li a:hover {
+    color: #EC0015 !important;
+  }
+  .navbar-container{
+    padding-bottom: 90px;
+  }
+  /* Remove the navbar's default margin-bottom and rounded borders */ 
+  .navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    background-color: #313131;
+    z-index: 100;
+  }
+  
+  /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+  .row.content {height: 450px}
+  #my_acc{
+    background-color: #014a8a;
+    border-radius: 5px;
+    color: #8d010c;
+  }
