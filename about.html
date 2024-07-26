@@ -22,26 +22,30 @@
         font-family: "Ga Maamli", sans-serif;
     }
     .text p{
-      color: white;
+      color: rgb(255, 255, 255);
         text-align: justify;
         font-size: 20px;
-        text-shadow: 
-                -1px -1px 0 #000,  
-                 1px -1px 0 #000,
-                -1px  1px 0 #000,
-                 1px  1px 0 #000; /* Text outline color */
         }
     
     .text h1{
-      color: #EC0015;
+      color: #00ff2a; /* Text color */
+    text-shadow: 
+        -1px -4px 0 #000,  
+        1px -4px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
 
     }
     .main{
-      background-image: url("images/gym_background.jpg");
+      background-image: url("images/gym_background.jpeg");
       background-size: cover; /* Ensure the image covers the entire element */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
-    padding: 300px 0; /* Top and bottom padding */
+    padding: 130px 0; /* Top and bottom padding */
+    }
+    .text{
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 10px;
     }
 </style>
 </head>
@@ -62,11 +66,11 @@
                 
               </ul>
               <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="home.html">Home</a></li>
-                <li><a href="about.html">About Sanzeus</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact us</a></li>
-                <li><a id="my_acc" href="register.html"><span class="glyphicon glyphicon-user"></span>Register</a></li>
+                <li id="home"><a  href="home.html">Home</a></li>
+                <li id="about"><a  href="about.html">About Sanzeus</a></li>
+                <li id="gallery"><a  href="gallery.html">Gallery</a></li>
+                <li id="contact"><a  class="nav-item nav-link" href="#contactNumber">Contact us</a></li>
+                <li id="my_acc"><a  href="register.html"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Register</a></li>
               </ul>
             </div>
           </div>
@@ -77,12 +81,12 @@
         <div class="text col-sm-3">
             <h1 style="font-size:50px;">Faster, Stronger, Harder</h1>
             <br>
-            <p> Sanzeus gym started in *year* and continue growing stronger with better equipment. The gym is equipped with best coaches , equipments and traning schedules that tailored to your preference. currently it's located in Nugegoda close to train station. We also provite personal traning and diet plans to get best of the workout. 
-            </p>
-            <p>Our vision is to make every member to be faster, stronger , better than before with proper workout and diet
-            </p>
-            <p>At Sanzeus gym we belive that fitness is part of our life that should be maintained well throgh out our life. Our trainers are certified experts in fitness industry that can provide best support anyone could ask for to help ypu in your fitness jorney. 
-            </p>
+            <p> Sanzeus gym started in *year* and continue growing stronger with better equipments, more coaches. The gym is equipped with best coaches , equipments and traning schedules that tailored to your preference. currently it's located in Nugegoda Tilakaratna Mawatha. We also provite personal traning and diet plans to get best of the workout. 
+            </p><br>
+            <p>Our vision is to make every member to gradually grow stronger and be better day by day with proper workout and diet
+            </p><br>
+            <p>At Sanzeus Gym, we believe that fitness is a part of our lives that should be maintained throughout our lives. Our trainers are certified experts in the fitness industry who provide the best support anyone could ask for to help you on your fitness journey.
+            </p><br>
             <br>
         </div>
         <div class="col-sm-3"><!--right space--></div>
@@ -123,5 +127,6 @@
       </div>
     </div>
   </footer>
+  <script src="header.js"></script>
 </body>
 </html>

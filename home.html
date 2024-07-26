@@ -14,7 +14,7 @@
   <style>
     body{
       font-family: "Roboto Condensed", sans-serif;
-      background-color:#fd9a97;
+      background-color:#ffc7c5;
       text-align: center;
       
     }
@@ -32,22 +32,20 @@
             align-items: flex-end; /* Align items to the bottom */
     }
     .image-container button{
-      margin-bottom: 30px; /* Adjust the distance from the bottom if needed */
+      margin-bottom: 10px; /* Adjust the distance from the bottom if needed */
           }
     button:hover{
       transform: scale(1.1);
     }
-    #img1{
-      background-image: url("images/image1.jpg");
-    }
-    #img2{
-      background-image: url("images/image2.jpg");
-    }
+    
+   
     #img3{
-      background-image: url("images/middle_img2.jpg");
+      background-image: url("images/gym_pic3.jpg");
+      border-left: 4px solid #014a8a;
+      border-right: 4px solid #014a8a;
     }
     .row1{
-      border-bottom:4px solid #014a8a;
+      border-bottom:7px solid #014a8a;
     }
     
     
@@ -94,19 +92,6 @@
           display: block; 
           margin: auto;
         }
-        #contactNumber.highlight {
-    background-color: rgb(99, 99, 57); /* Highlight color */
-    padding: 5px;
-    
-}
-html {
-            scroll-behavior: smooth;
-        }
-        #contactNumber {
-    transition: background-color 0.5s ease; /* Smooth transition for the background color */
-}
-
-        
   </style>
 </head>
 <body>
@@ -126,12 +111,12 @@ html {
           
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="home.html">Home</a></li>
-          <li><a href="about.html">About Sanzeus</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a class="nav-item nav-link" href="#contactNumber">Contact us</a></li>
-          <li><a id="my_acc" href="register.html"><span class="glyphicon glyphicon-user"></span>Register</a></li>
-        </ul>
+          <li id="home" ><a  href="home.html">Home</a></li>
+          <li id="about" ><a  href="about.html">About Sanzeus</a></li>
+          <li id="gallery" ><a  href="gallery.html">Gallery</a></li>
+          <li id="contact" ><a  class="nav-item nav-link" href="contact.html">Contact us</a></li>
+          <li id="my_acc" ><a  href="register.html"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Register</a></li>
+              </ul>
       </div>
     </div>
   </nav>
@@ -141,13 +126,37 @@ html {
 <div class="container-fluid text-center"> 
     <div class="row row1">
         <div class="col-sm-4 image-container" id="img1">
-          
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active">
+                <img src="images/fitness-quote1.jpg" alt="Los Angeles" style="width:100%;">
+              </div>
+        
+              <div class="item">
+                <img src="images/fitness-quote2.jpg" alt="Chicago" style="width:100%;">
+              </div>
+            </div>
+          </div>
     </div> 
     <div class="col-sm-4 image-container" id="img3">
         <button>Join today!</button>
     </div>   
     <div class="col-sm-4 image-container" id="img2">
-      
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="images/fitness-quote3.jpg" alt="Los Angeles" style="width:100%;">
+          </div>
+    
+          <div class="item">
+            <img src="images/fitness-quote4.jpg" alt="Chicago" style="width:100%;">
+          </div>
+        </div>
+      </div>
     </div> 
     </div>
   <div class="row content">
@@ -216,9 +225,13 @@ html {
         <h3 style="text-align: center;">Physical Health Benefits</h3>
         <br>
         <p>1. Improved Cardiovascular Health: Regular exercise strengthens the heart, improves circulation, and reduces the risk of heart disease.</p>
+        <br>
         <p>2. Weight Management: Physical activity helps control weight by burning calories and increasing metabolism.</p>
+        <br>
         <p>3. Enhanced Muscle Strength and Endurance: Exercise builds muscle strength and endurance, making daily activities easier and improving overall fitness.</p>
+        <br>
         <p>4. Bone Health: Weight-bearing exercises, like running and strength training, strengthen bones and reduce the risk of osteoporosis.</p>
+        <br>
         <p>5. Improved Flexibility and Mobility: Stretching and flexibility exercises enhance the range of motion in joints and reduce the risk of injuries.</p>
       </div>
       <div class="col-sm-6 text-left" style="font-size:large">
@@ -226,9 +239,13 @@ html {
         <h3 style="text-align: center;">Mental Health Benefits</h3>
         <br>
         <p>1. Reduced Stress and Anxiety: Physical activity releases endorphins, which act as natural stress relievers, and can reduce symptoms of anxiety.</p>
+        <br>
         <p>2. Improved Mood: Regular exercise is linked to improvements in mood and can help alleviate symptoms of depression.</p>
+        <br>
         <p>3. Enhanced Cognitive Function: Exercise boosts brain function, improving memory, concentration, and overall cognitive abilities.</p>
+        <br>
         <p>4. Better Sleep: Physical activity can help regulate sleep patterns and improve the quality of sleep.</p>
+        <br>
         <p>5. Increased Self-Esteem and Confidence: Achieving fitness goals and seeing physical improvements can boost self-esteem and confidence.</p>
       </div>
     
@@ -276,28 +293,6 @@ html {
     </div>
   </div>
 </footer>
-<script>
-  function delay(duration) {
-    return new Promise(resolve => setTimeout(resolve, duration));
-}
-  $(document).ready(function() {
-      // When the "Contact Us" link is clicked
-      $('a[href="#contactNumber"]').click(function(e) {
-          // Add the highlight class to the contact number
-          delay(500).then(() => {
-          var contactNumber = $('#contactNumber');
-          contactNumber.addClass('highlight');
-          
-          // Remove the highlight after 3 seconds
-          setTimeout(function() {
-              contactNumber.removeClass('highlight');
-          }, 3000);
-      });
-  });
-});
-  </script>
-  
-  
-  
+<script src="header.js"></script>
 </body>
 </html>

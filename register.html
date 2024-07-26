@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sanzeus gym | Registration</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="footer_and_header.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <style>
   body{
+    font-family: "Roboto Condensed", sans-serif;
     background-image: url("images/register-bg.jpg");
   }
   .main-container{
@@ -37,11 +41,11 @@
                 
               </ul>
               <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="home.html">Home</a></li>
-                <li><a href="about.html">About Sanzeus</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact us</a></li>
-                <li><a id="my_acc" href="register.html"><span class="glyphicon glyphicon-user"></span>Register</a></li>
+                <li id="home"><a  href="home.html">Home</a></li>
+                <li id="about"><a  href="about.html">About Sanzeus</a></li>
+                <li id="gallery"><a  href="gallery.html">Gallery</a></li>
+                <li id="contact"><a  class="nav-item nav-link" href="#contactNumber">Contact us</a></li>
+                <li id="my_acc"><a  href="register.html"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Register</a></li>
               </ul>
             </div>
           </div>
@@ -112,8 +116,8 @@
                 <input type="text" class="form-control" id="condition_details" placeholder="Enter condition details" name="condition_details">
               </div>
               <div class="form-group">
-                <label for="pwd">Have you attend to gym before? If yes state how long.</label>
-                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                <label for="attended_gym">Have you attend to gym before? If yes state how long.</label>
+                <input type="text" class="form-control" id="attended_gym" placeholder="how long have you attended gym?" name="attended_gym">
               </div>
               
               <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Submit</button>
@@ -178,5 +182,18 @@
       </div>
     </div>
   </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const currentPath = window.location.pathname.split('/').pop();
+      const navLinks = document.querySelectorAll('.nav navbar-nav navbar-right li a');
+      
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+          link.parentElement.classList.add('active');
+        }
+      });
+    });
+  </script>
+  <script src="header.js"></script>
 </body>
 </html>
