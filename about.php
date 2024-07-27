@@ -50,32 +50,7 @@
 </style>
 </head>
 <body>
-    <div class="navbar-container">
-        <nav class="navbar navbar-inverse">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>                        
-              </button>
-              <a class="navbar-brand" href="#"><img src="images/logo2.png" id="logo" alt="logo"></a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-              <ul class="nav navbar-nav">
-                
-              </ul>
-              <ul class="nav navbar-nav navbar-right">
-                <li id="home"><a  href="home.html">Home</a></li>
-                <li id="about"><a  href="about.html">About Sanzeus</a></li>
-                <li id="gallery"><a  href="gallery.html">Gallery</a></li>
-                <li id="contact"><a  class="nav-item nav-link" href="#contactNumber">Contact us</a></li>
-                <li id="my_acc"><a  href="register.html"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Register</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
+  <?php include('header.php') ?>
     <div class="main row">
         <div class="col-sm-6"><!--left space--></div>
         <div class="text col-sm-3">
@@ -92,41 +67,7 @@
         <div class="col-sm-3"><!--right space--></div>
     </div>
     <!-- Footer -->
-<footer class="footer bg-purple text-white">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-2">
-          <a href="#"></a>
-        </div>
-        <div class="col-md-2">
-          <h5 class="footer-heading"><a href="about.html">About Sanzeus gym</a></h5>
-        </div>
-        <div class="col-md-2">
-          <h5 class="footer-heading"><a href="gallery.html">Gallery</a></h5>
-        </div>
-        <div class="col-md-2">
-          <h5 class="footer-heading"><a href="contact.html">Contact us</a></h5>
-        </div>
-        <div class="col-md-2">
-          <h5 class="footer-heading"><a href="register.html">Memberships</a></h5>
-        </div>
-      </div>
-    
-      <hr class="footer-hr">
-      <div class="row mt-3">
-        <div class="col-md-12 text-center">
-          <a id="location" href="https://maps.app.goo.gl/UXBW47KNEtETV3P7A" target="_blank">Sanzeus gym | 117, Stanley Tilakaratne Mawatha, Nugegoda</a>
-          <br>
-          <p>Contact no: 077 995 2196</p>
-          <p>© 2024 Sanzeus gym</p>
-          <div>
-            <a href="https://web.facebook.com/SanZeusGYM"><img class="icon" src="images/fb-icon.png" alt="Facebook"></a>
-            <a href="https://www.instagram.com/sanzeusgym/"><img class="icon" src="images/insta-icon.png" alt="Instagram"></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+    <?php include('footer.php') ?>
   <script src="header.js"></script>
 </body>
 </html>

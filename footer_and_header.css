@@ -72,6 +72,12 @@ margin: 20px 0; /* Optional: Adjust the margin as needed */
     background-color: #014a8a;
     border-radius: 5px;
     color: #8d010c;
+    margin-left: 10px;
   }
  
+  .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    color: #fff !important;
+    background-color: #080808 !important;
+  
+}
   

@@ -15,49 +15,41 @@
   body{
     font-family: "Roboto Condensed", sans-serif;
     background-image: url("images/register-bg.jpg");
+    overflow-x: hidden;
   }
   .main-container{
     background-color: rgb(152, 212, 247);
-    padding: 20px;
-    margin:20px 0 20px 0;
+    padding: 20px 20px 60px 20px;
+    margin:60px 40px 20px 80px;
     border-radius: 5px;
   }
+  #membership-rate{
+    margin: 20px 0;
+    width: 500px;
+  }
+  select{
+    padding: 10px;
+    border-radius: 10px;
+    border: 0;
+  }
+  .btn{
+    position: absolute;
+    border: 0;
+    border-radius: 7px;
+    padding: 10px 15px;
+    right:70px;
+    bottom:30px;
+  }
+
 </style>
   </head>
 <body>
-    <div class="navbar-container">
-        <nav class="navbar navbar-inverse">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>                        
-              </button>
-              <a class="navbar-brand" href="#"><img src="images/logo2.png" id="logo" alt="logo"></a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-              <ul class="nav navbar-nav">
-                
-              </ul>
-              <ul class="nav navbar-nav navbar-right">
-                <li id="home"><a  href="home.html">Home</a></li>
-                <li id="about"><a  href="about.html">About Sanzeus</a></li>
-                <li id="gallery"><a  href="gallery.html">Gallery</a></li>
-                <li id="contact"><a  class="nav-item nav-link" href="#contactNumber">Contact us</a></li>
-                <li id="my_acc"><a  href="register.html"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Register</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-
+<?php include('header.php') ?>
       <div class="row">
-        <div class="col-sm-3"></div>
-        <div class="col-sm-6">
+        <div class="col-sm-8">
           <div class="main-container">
             <h2>Register form</h2>
-            <form action="/action_page.php">
+            <form action="action_page.php" method="POST">
               <div class="row">
                 <div class="col-sm-6">
                   <div class="form-group">
@@ -82,7 +74,7 @@
                 <div class="col-sm-6">
                   <div class="form-group">
                     <label for="p_no">Phone Number *</label>
-                    <input type="text" class="form-control" id="email" placeholder="Enter phone number" name="p_no">
+                    <input type="text" class="form-control" id="p_no" placeholder="Enter phone number" name="p_no">
                   </div>
                 </div>
                 
@@ -90,10 +82,25 @@
               <div class="row">
                 <div class="col-sm-6">
                   <div class="form-group">
+                    <label for="address">Address: *</label>
+                    <input type="text" class="form-control" id="address" placeholder="Enter address" name="address">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="dob">Date of birth: *</label>
+                    <input type="date" class="form-control" id="dob" placeholder="Enter date of birth" name="dob">
+                  </div>
+                </div>
+                </div>
+              
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
                     <label for="gender">Gender: *</label>
-                    <input type="radio" id="male" name="gender" value="male">
+                    <input type="radio" id="male" name="gender" value="0">
                     <label for="male">Male</label>&nbsp;&nbsp;&nbsp;
-                    <input type="radio" id="female" name="email" value="female">
+                    <input type="radio" id="female" name="gender" value="1">
                   <label for="female">Female</label>
                   </div>
                 </div>
@@ -106,9 +113,9 @@
               
               <div class="form-group">
                 <label for="condition">Is there any heart or medical conditions you expericed befoere? *</label><br>
-                <input type="radio" id="condition_yes" name="condition_yes" value="yes">
+                <input type="radio" id="condition_yes" name="condition" value="1">
                 <label for ="yes">Yes</label>
-                <input type="radio" id="condition_no" name="condition_no" value="no">
+                <input type="radio" id="condition_no" name="condition" value="0">
                 <label for="no">No</label>
               </div>
               <div class="form-group">
@@ -119,12 +126,29 @@
                 <label for="attended_gym">Have you attend to gym before? If yes state how long.</label>
                 <input type="text" class="form-control" id="attended_gym" placeholder="how long have you attended gym?" name="attended_gym">
               </div>
-              
-              <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Submit</button>
+              <div class="form-group">
+                <label for="membership_type">Choose membership type:</label>
+                <select class="membership_type" name="membership_type">
+                <option value="1">Annual Membership | Gents (Rs.25 000)</option>
+                <option value="2">Annual Membership | Ladies (Rs.20 000)</option>
+                <option value="3">6 Months | Gents/Ladies (Rs.15 000)</option>
+                <option value="4">3 Months | Gents/Ladies (Rs.10 000)</option>
+                <option value="5">1 Month | Gents/Ladies (Rs.3500)</option>
+                <option value="6">Annual Couple Membership (Rs.35 000) </option>
+                <option value="7">6 months Couple Membership (Rs.35 000) </option>
+                <option value="8">3 months Couple Membership (19 000) </option>
+                <option value="9">Annual Corperate Package | 5 Persons only (1x Rs.17 500) </option>  
+                <option value="10">VIP Personal Training 1 month | 12 sessions (Rs.15 000) </option>
+                <option value="11">VIP Personal Training 3 months | 36 sessions (Rs.45 000)</option>
+              </select>
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
             </form>
           </div>
         </div>
-        <div class="col-sm-3"></div>
+        <div class="col-sm-4">
+        <img id="membership-rate" src="images/membership_rate.jpg">
+        </div>
       </div>
        <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
@@ -147,41 +171,7 @@
     </div>
   </div>
     <!-- Footer -->
-<footer class="footer bg-purple text-white">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-2">
-          <a href="#"></a>
-        </div>
-        <div class="col-md-2">
-          <h5 class="footer-heading"><a href="about.html">About Sanzeus gym</a></h5>
-        </div>
-        <div class="col-md-2">
-          <h5 class="footer-heading"><a href="gallery.html">Gallery</a></h5>
-        </div>
-        <div class="col-md-2">
-          <h5 class="footer-heading"><a href="contact.html">Contact us</a></h5>
-        </div>
-        <div class="col-md-2">
-          <h5 class="footer-heading"><a href="register.html">Memberships</a></h5>
-        </div>
-      </div>
-    
-      <hr class="footer-hr">
-      <div class="row mt-3">
-        <div class="col-md-12 text-center">
-          <a id="location" href="https://maps.app.goo.gl/UXBW47KNEtETV3P7A" target="_blank">Sanzeus gym | 117, Stanley Tilakaratne Mawatha, Nugegoda</a>
-          <br>
-          <p>Contact no: 077 995 2196</p>
-          <p>© 2024 Sanzeus gym</p>
-          <div>
-            <a href="https://web.facebook.com/SanZeusGYM"><img class="icon" src="images/fb-icon.png" alt="Facebook"></a>
-            <a href="https://www.instagram.com/sanzeusgym/"><img class="icon" src="images/insta-icon.png" alt="Instagram"></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+    <?php include('footer.php') ?>
   <script>
     document.addEventListener('DOMContentLoaded', (event) => {
       const currentPath = window.location.pathname.split('/').pop();

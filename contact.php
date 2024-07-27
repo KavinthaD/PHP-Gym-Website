@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sanzeus gym | Contact</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -13,12 +13,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <style>
+  body{
+    overflow-x: hidden;
+  }
   .main-container{
     background-color: rgba(0, 0, 0, 0.5);
     margin: 20px 0 20px 0;
     border-radius: 10px;
+    color: white;
   }
   body{
+    background-color: rgb(174, 200, 255);
     font-family: "Roboto Condensed", sans-serif;
   }
   #chat-container {
@@ -108,32 +113,7 @@
 </style>
 </head>
 <body>
-  <div class="navbar-container">
-    <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>                        
-          </button>
-          <a class="navbar-brand" href="#"><img src="images/logo2.png" id="logo" alt="logo"></a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav">
-            
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li id="home"><a  href="home.html">Home</a></li>
-            <li id="about"><a  href="about.html">About Sanzeus</a></li>
-            <li id="gallery"><a  href="gallery.html">Gallery</a></li>
-            <li id="contact"><a  class="nav-item nav-link" href="#contactNumber">Contact us</a></li>
-            <li id="my_acc"><a  href="register.html"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Register</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </div>
+<?php include('header.php') ?>
 
   <div class="row">
     <div class="col-sm-2"></div>
@@ -141,7 +121,7 @@
       
       <div class="col-sm-7">
         <br>
-        <h2>Location</h2>
+        <h2>Find us</h2>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.145918387884!2d79.88833157568119!3d6.873113819000452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25a46ae9c6171%3A0xd0478ba261b17fa3!2sSanzeus!5e0!3m2!1sen!2slk!4v1722008998881!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     <br><br><br>
       </div>
@@ -169,41 +149,7 @@
   </div>
 
     <!-- Footer -->
-<footer class="footer bg-purple text-white">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-2">
-          <a href="#"></a>
-        </div>
-        <div class="col-md-2">
-          <h5 class="footer-heading"><a href="about.html">About Sanzeus gym</a></h5>
-        </div>
-        <div class="col-md-2">
-          <h5 class="footer-heading"><a href="gallery.html">Gallery</a></h5>
-        </div>
-        <div class="col-md-2">
-          <h5 class="footer-heading"><a href="contact.html">Contact us</a></h5>
-        </div>
-        <div class="col-md-2">
-          <h5 class="footer-heading"><a href="register.html">Memberships</a></h5>
-        </div>
-      </div>
-    
-      <hr class="footer-hr">
-      <div class="row mt-3">
-        <div class="col-md-12 text-center">
-          <a id="location" href="https://maps.app.goo.gl/UXBW47KNEtETV3P7A" target="_blank">Sanzeus gym | 117, Stanley Tilakaratne Mawatha, Nugegoda</a>
-          <br>
-          <p>Contact no: 077 995 2196</p>
-          <p>© 2024 Sanzeus gym</p>
-          <div>
-            <a href="https://web.facebook.com/SanZeusGYM"><img class="icon" src="images/fb-icon.png" alt="Facebook"></a>
-            <a href="https://www.instagram.com/sanzeusgym/"><img class="icon" src="images/insta-icon.png" alt="Instagram"></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+    <?php include('footer.php') ?>
   <script src="header.js"></script>
   <script>
     document.getElementById('send-message').addEventListener('click', function() {

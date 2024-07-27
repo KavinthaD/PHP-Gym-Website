@@ -5,19 +5,19 @@ window.onload = function () {
     // Determine the button ID based on the filename
     var buttonId = "";
     switch (currentPage) {
-      case "home.html":
+      case "home.php":
         buttonId = "home";
         break;
-      case "gallery.html":
+      case "gallery.php":
         buttonId = "gallery";
         break;
-      case "about.html":
+      case "about.php":
         buttonId = "about";
         break;
-      case "register.html":
+      case "register.php":
         buttonId = "my_acc";
         break;
-      case "contact.html":
+      case "contact.php":
         buttonId = "contact";
         break;
     }
