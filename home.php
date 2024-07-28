@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="footer_and_header.css">
+  <link rel="stylesheet"  type="text/css" href="footer_and_header.css">
   <style>
     body {
       font-family: "Roboto Condensed", sans-serif;
@@ -22,7 +22,22 @@
 
 
 
-    .image-container {
+    #img1,#img2 {
+      height: 500px;
+      overflow: hidden;
+      padding: 0;
+      background-size: cover;
+      /* Cover the entire area of the div */
+      background-position: center;
+      /* Center the background image */
+      display: flex;
+      justify-content: center;
+      /* Center horizontally */
+      align-items: flex-start;
+      /* Align items to the bottom */
+      
+    }
+    #img3{
       height: 500px;
       overflow: hidden;
       padding: 0;
@@ -74,15 +89,15 @@
     }
 
     #card1 {
-      background-image: url("images/card1.png");
+      background-image: url("images/gents_card.jpg");
     }
 
     #card2 {
-      background-image: url("images/card2.png");
+      background-image: url("images/couple_card.jpg");
     }
 
     #card3 {
-      background-image: url("images/card3.png");
+      background-image: url("images/vip_card.jpg");
     }
 
     .card.container {
@@ -143,6 +158,13 @@
     color: white;
     }
         
+    hr{
+      border-radius: 15px;
+      border: 1px solid black;
+    }
+    .card hr{
+      border: 1px solid white;
+    }
   </style>
 </head>
 
@@ -153,37 +175,19 @@
   <div class="container-fluid text-center">
     <div class="row row1">
       <div class="col-sm-4 image-container" id="img1">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            <div class="item active">
-              <img src="images/fitness-quote1.jpg" alt="Los Angeles" style="width:100%;">
-            </div>
-
-            <div class="item">
-              <img src="images/fitness-quote2.jpg" alt="Chicago" style="width:100%;">
-            </div>
-          </div>
-        </div>
+      <video autoplay loop muted>
+            <source src="images/video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
       </div>
       <div class="col-sm-4 image-container" id="img3">
         <button class="join-button" onclick="window.location.href='register.php'">Join today!</button>
       </div>
       <div class="col-sm-4 image-container" id="img2">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            <div class="item active">
-              <img src="images/fitness-quote3.jpg" alt="Los Angeles" style="width:100%;">
-            </div>
-
-            <div class="item">
-              <img src="images/fitness-quote4.jpg" alt="Chicago" style="width:100%;">
-            </div>
-          </div>
-        </div>
+      <video autoplay loop muted>
+            <source src="images/video2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
       </div>
     </div>
     <div class="row row2">
@@ -191,8 +195,9 @@
         <!--left space-->
       </div>
       <div class="col-sm-8">
+        <hr>
         <h1 style="text-align: center;">Memberships</h1>
-
+        <hr>
         <br>
         <p style="text-align: center; font-size: larger;">We offer variety of memberships such as monthly or yearly and
           special memebrships for couples</p>
@@ -225,7 +230,7 @@
             <br>
             <p>+Access to all gym equipment</p>
             <p>+Gym open 5am to 10pm</p>
-            <p>+persoanl couch traning with couple sessions</p>
+            <p>+persoanl coach traning with couple sessions</p>
             <hr>
             <button>Join now</button>
 
@@ -240,7 +245,7 @@
             <p>plus taxes and fees</p>
             <br>
             <p>+Access to all gym equipment</p>
-            <p>+personal couch to train</p>
+            <p>+personal coach to train</p>
             <br>
             <hr>
             <button>Join now</button>

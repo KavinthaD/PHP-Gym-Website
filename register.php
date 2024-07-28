@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,12 +20,12 @@
   }
   .main-container{
     background-color: rgb(152, 212, 247);
-    padding: 20px 20px 60px 20px;
+    padding: 20px 20px 100px 20px;
     margin:60px 40px 20px 80px;
     border-radius: 5px;
   }
   #membership-rate{
-    margin: 20px 0;
+    margin: 60px 0 0 0;
     width: 500px;
   }
   select{
@@ -37,9 +38,31 @@
     border: 0;
     border-radius: 7px;
     padding: 10px 15px;
-    right:70px;
-    bottom:30px;
+    right:80px;
+    bottom:40px;
+    background-color: rgb(0,82,153) !important;
+      
+      
+      
+      color: white !important;
+      font-size: 20px;
+      
+      cursor: pointer;
+      box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.9); /* Box shadow around the button */
+      /* Box shadow added */
+      transition: background 0.3s, transform 0.3s;
   }
+    .btn:hover {
+      background:rgb(233,0,15) !important;
+      transform: scale(1.05);
+    }
+
+        .error-message {
+            color: red;
+        }
+        .success-message {
+            color: green;
+        }
 
 </style>
   </head>
@@ -48,7 +71,24 @@
       <div class="row">
         <div class="col-sm-8">
           <div class="main-container">
-            <h2>Register form</h2>
+            <h2>Register here</h2>
+            <?php if(isset($_SESSION['error'])): ?>
+            <div class="alert alert-danger">
+                <?php 
+                    echo $_SESSION['error']; 
+                    unset($_SESSION['error']);
+                ?>
+            </div>
+            <?php endif; ?>
+
+            <?php if(isset($_SESSION['success'])): ?>
+                <div class="alert alert-success">
+                    <?php 
+                        echo $_SESSION['success']; 
+                        unset($_SESSION['success']);
+                    ?>
+                </div>
+            <?php endif; ?>
             <form action="action_page.php" method="POST">
               <div class="row">
                 <div class="col-sm-6">

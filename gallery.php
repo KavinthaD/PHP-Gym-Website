@@ -43,8 +43,8 @@
             <div class="item active">
               <img src="images/gallery1.png" alt="Los Angeles" style="width:100%;">
               <div class="carousel-caption">
-                <h3>test</h3>
-                <p>test</p>
+                <h3>Welcome to</h3>
+                <p>Sanzeus</p>
               </div>
             </div>
       

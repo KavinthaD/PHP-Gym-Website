@@ -110,6 +110,34 @@
     font-size: 16px;
     cursor: pointer;
 }
+#msg{
+  height: 140px;
+}
+.form-container{
+  margin: 0;
+}
+.form-container button{
+    position: absolute;
+    border: 0;
+    border-radius: 7px;
+    padding: 10px 15px;
+    
+    background-color: rgb(0,82,153) !important;
+      
+      
+      
+      color: white !important;
+      font-size: 20px;
+      
+      cursor: pointer;
+      box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.9); /* Box shadow around the button */
+      /* Box shadow added */
+      transition: background 0.3s, transform 0.3s;
+  }
+    .form-container button:hover {
+      background:rgb(233,0,15) !important;
+      transform: scale(1.05);
+    }
 </style>
 </head>
 <body>
@@ -122,13 +150,55 @@
       <div class="col-sm-7">
         <br>
         <h2>Find us</h2>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.145918387884!2d79.88833157568119!3d6.873113819000452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25a46ae9c6171%3A0xd0478ba261b17fa3!2sSanzeus!5e0!3m2!1sen!2slk!4v1722008998881!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.145918387884!2d79.88833157568119!3d6.873113819000452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25a46ae9c6171%3A0xd0478ba261b17fa3!2sSanzeus!5e0!3m2!1sen!2slk!4v1722008998881!5m2!1sen!2slk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     <br><br><br>
       </div>
-      <div class="col-sm-5">
+      <div class="form-container col-sm-5">
         <br><br><br><br>
-        <p>Sanzeus gym | 117, Stanley Tilakaratne Mawatha, Nugegoda</p>
-        <p>Contact no: 077 995 2196</p>
+        <form>
+          <h2>Ask away any question.</h2>
+          <br>
+          <div class="row">
+            <div class="col-sm-6">
+            <div class="form-group">
+                    <label for="f_name">First name:</label>
+                    <input type="text" class="form-control" id="f_name" name="f_name">
+                  </div>
+            </div>
+            <div class="col-sm-6">
+            <div class="form-group">
+                    <label for="l_name">Last name:</label>
+                    <input type="text" class="form-control" id="l_name" name="l_name">
+                  </div>
+            </div>
+                  
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+            <div class="form-group">
+                    <label for="email">Email: *</label>
+                    <input type="email" class="form-control" id="email" name="email">
+                  </div>
+            </div>
+            <div class="col-sm-6">
+            <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" class="form-control" id="subject" name="subject">
+                  </div>
+            </div>
+                  
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+            <div class="form-group">
+                    <label for="msg">Message</label>
+                    <input type="text" class="form-control" id="msg" name="msg">
+                  </div>
+          </div>
+            </div>
+          <button type="submit">Submit</button>
+        </form>
+        </div>
         <div id="chat-container">
           <div id="chat-header">
               <h2>Chat with us!</h2>

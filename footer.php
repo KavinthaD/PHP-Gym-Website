@@ -5,16 +5,16 @@
         <a href="#"></a>
       </div>
       <div class="col-md-2">
-        <h5 class="footer-heading"><a href="about.html">About Sanzeus gym</a></h5>
+        <h5 class="footer-heading"><a href="about.php">About Sanzeus gym</a></h5>
       </div>
       <div class="col-md-2">
-        <h5 class="footer-heading"><a href="gallery.html">Gallery</a></h5>
+        <h5 class="footer-heading"><a href="gallery.php">Gallery</a></h5>
       </div>
       <div class="col-md-2">
-        <h5 class="footer-heading"><a href="contact.html">Contact us</a></h5>
+        <h5 class="footer-heading"><a href="contact.php">Contact us</a></h5>
       </div>
       <div class="col-md-2">
-        <h5 class="footer-heading"><a href="register.html">Memberships</a></h5>
+        <h5 class="footer-heading"><a href="register.php">Memberships</a></h5>
       </div>
     </div>
   
